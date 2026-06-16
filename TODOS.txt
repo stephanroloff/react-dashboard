@@ -1,2 +1,3 @@
-Responsive Login Page
-Register Form
+Responsive Login / Sign Up Page
+Language (System para Login y Sing Up)
+Forgot your Password? (reset password)

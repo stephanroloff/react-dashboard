@@ -1,13 +1,13 @@
-import { LoginForm } from "@/components/Login/LoginForm";
 import PageTransition from "@/components/PageTransition";
 import loginImage from "@/assets/login.webp";
+import { SignUpForm } from "@/components/SignUp/SignUpForm";
 
-function Login() {
+function SignUp() {
   return (
     <PageTransition>
       <div className="w-full flex items-center justify-center h-dvh max-h-[100vh] overflow-hidden">
         <div className="w-1/2 flex items-center justify-end pr-30">
-          <LoginForm className="w-[450px]" />
+          <SignUpForm className="w-[450px]" />
         </div>
         <div className="w-1/2 flex items-center justify-start">
           <img
@@ -21,4 +21,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignUp;

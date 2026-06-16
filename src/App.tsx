@@ -10,10 +10,11 @@ import BreadcrumbComponent from "./components/Breadcrumb.tsx";
 import { initializeStore } from "./store/initialize.tsx";
 import { AnimatePresence } from "motion/react";
 import Login from "./pages/Login.tsx";
+import SignUp from "./pages/SignUp.tsx";
 
 function App() {
   initializeStore();
-  const loggedIn = true;
+  const loggedIn = false;
 
   return (
     <>
@@ -38,7 +39,10 @@ function App() {
           </main>
         </SidebarProvider>
       ) : (
-        <Login />
+        <Routes>
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="*" element={<Login />} />
+        </Routes>
       )}
     </>
   );
