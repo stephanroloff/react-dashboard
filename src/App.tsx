@@ -15,6 +15,7 @@ import SignUp from "./pages/SignUp.tsx";
 function App() {
   initializeStore();
   const loggedIn = false;
+  // Const loggedIn = true;
 
   return (
     <>

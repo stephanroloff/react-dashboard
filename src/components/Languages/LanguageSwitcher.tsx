@@ -10,6 +10,7 @@ import esFlag from "../../assets/es.svg";
 import deFlag from "../../assets/de.svg";
 import i18n from "../../translations/i18n";
 import useStore, { type LanguagesTypes } from "@/store/store.tsx";
+// Import { GlobeIcon } from "lucide-react";
 
 export function LanguageSwitcher() {
   const { language, setLanguage } = useStore();
@@ -51,6 +52,10 @@ export function LanguageSwitcher() {
           <img src={esFlag} alt="Spanish" className="size-4" />
           Spanish
         </DropdownMenuItem>
+        {/* <DropdownMenuItem onClick={() => handleLanguageChange("system")}>
+          <GlobeIcon className="size-4" />
+          System
+        </DropdownMenuItem> */}
       </DropdownMenuContent>
     </DropdownMenu>
   );

@@ -4,5 +4,31 @@
     "hours": "Horas",
     "minutes": "Minutos",
     "seconds": "Segundos"
+  },
+  "loginForm": {
+    "title": "Iniciar sesión en tu cuenta",
+    "description": "Ingresa tu correo electrónico para iniciar sesión en tu cuenta",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "login": "Iniciar sesión",
+    "orContinueWith": "O continuar con",
+    "loginWithGoogle": "Iniciar sesión con Google",
+    "loginWithApple": "Iniciar sesión con Apple",
+    "dontHaveAccount": "¿No tienes una cuenta?",
+    "signUp": "Registrarse"
+  },
+  "signupForm": {
+    "title": "Crear tu cuenta",
+    "description": "Rellena el formulario para crear tu cuenta",
+    "fullName": "Nombre completo",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "passwordDescription": "Debe tener al menos 8 caracteres.",
+    "confirmPassword": "Confirmar contraseña",
+    "confirmPasswordDescription": "Por favor, confirma tu contraseña.",
+    "signUp": "Registrarse",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "loginHere": "Iniciar sesión aquí"
   }
 }

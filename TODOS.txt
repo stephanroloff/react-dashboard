@@ -1,3 +1,7 @@
 Responsive Login / Sign Up Page
-Language (System para Login y Sing Up)
 Forgot your Password? (reset password)
+
+
+To Do's
+Dashboard con Backend Supabase
+Dashboard con Backend Wordpress

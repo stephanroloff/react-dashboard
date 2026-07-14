@@ -4,5 +4,31 @@
     "hours": "Hours",
     "minutes": "Minutes",
     "seconds": "Seconds"
+  },
+  "loginForm": {
+    "title": "Login to your account",
+    "description": "Enter your email below to login to your account",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot your password?",
+    "login": "Login",
+    "orContinueWith": "Or continue with",
+    "loginWithGoogle": "Login with Google",
+    "loginWithApple": "Login with Apple",
+    "dontHaveAccount": "Don't have an account?",
+    "signUp": "Sign up"
+  },
+  "signupForm": {
+    "title": "Create your account",
+    "description": "Fill in the form below to create your account",
+    "fullName": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "passwordDescription": "Must be at least 8 characters long.",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordDescription": "Please confirm your password.",
+    "signUp": "Sign up",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginHere": "Login here"
   }
 }

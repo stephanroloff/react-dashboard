@@ -17,7 +17,7 @@ function Home() {
       </CardSmall>
       <div className="flex gap-4 mt-4">
         <CardSmall className="w-[1000px] bg-green-300/10 border-green-400 border-1">
-          <Countdown targetDate={new Date("2026-06-29T00:00:00")} />
+          <Countdown targetDate={new Date("2026-07-29T00:00:00")} />
         </CardSmall>
         <CardSmall>
           <Spacer height={100} />

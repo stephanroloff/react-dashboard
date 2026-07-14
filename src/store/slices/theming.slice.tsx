@@ -3,7 +3,7 @@ import type { Store } from "../store";
 export const createThemingSlice = (
   set: (partial: Partial<Store> | ((state: Store) => Partial<Store>)) => void,
 ) => ({
-  theme: "light" as const,
+  theme: "system" as const,
   setTheme: (theme: Store["theme"]) => {
     const root = window.document.documentElement;
     root.classList.remove("light", "dark", "system");

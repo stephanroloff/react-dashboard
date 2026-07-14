@@ -4,7 +4,7 @@ import { createThemingSlice } from "./slices/theming.slice";
 import { createLanguageSlice } from "./slices/language.slice";
 
 export type ThemeModesTypes = "light" | "dark" | "system";
-export type LanguagesTypes = "en" | "de" | "es";
+export type LanguagesTypes = "en" | "de" | "es" | "system";
 
 export interface Store {
   theme: ThemeModesTypes;
