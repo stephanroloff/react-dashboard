@@ -8,7 +8,9 @@ import {
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router";
 import useStore, { type LanguagesTypes } from "@/store/store";
+import supabase from "@/supabase/connect";
 
 export function SignUpForm({
   className,
@@ -16,6 +18,7 @@ export function SignUpForm({
 }: React.ComponentProps<"form">) {
   const { language, setLanguage } = useStore();
   const { i18n, t } = useTranslation();
+  const navigate = useNavigate();
 
   if (language === "system") {
     const systemLanguage = navigator.language.split("-")[0];
@@ -31,6 +34,22 @@ export function SignUpForm({
       setLanguage("en");
     }
   }
+
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const { error } = await supabase.auth.signUp({
+      email: "s.roloff01@gmail.com",
+      password: "xsBK4CRACqPGp4xQu-jbRPk9",
+    });
+
+    if (error) {
+      console.error("Error al registrarse", error);
+      return;
+    }
+
+    navigate("/");
+  };
+
   return (
     <form className={cn("flex flex-col gap-6", className)} {...props}>
       <FieldGroup>
@@ -69,7 +88,9 @@ export function SignUpForm({
           </FieldDescription>
         </Field>
         <Field>
-          <Button type="submit">{t("signupForm.signUp")}</Button>
+          <Button type="submit" onClick={(e) => handleSubmit(e)}>
+            {t("signupForm.signUp")}
+          </Button>
         </Field>
         <Field>
           <FieldDescription className="px-6 text-center">

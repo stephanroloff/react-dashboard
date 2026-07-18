@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router";
 import Home from "./pages/Home.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -11,14 +12,18 @@ import { initializeStore } from "./store/initialize.tsx";
 import { AnimatePresence } from "motion/react";
 import Login from "./pages/Login.tsx";
 import SignUp from "./pages/SignUp.tsx";
+import { useAuthSession } from "./components/Login/authSession.tsx";
 
 function App() {
-  initializeStore();
-  const loggedIn = false;
+  const { authSession } = useAuthSession();
+
+  useEffect(() => {
+    initializeStore();
+  }, []);
 
   return (
     <>
-      {loggedIn ? (
+      {authSession ? (
         <SidebarProvider>
           <AppSidebar />
           <SidebarTrigger />

@@ -10,6 +10,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { useTranslation } from "react-i18next";
 import useStore, { type LanguagesTypes } from "@/store/store";
+import supabase from "@/supabase/connect";
+import { useNavigate } from "react-router";
 
 export function LoginForm({
   className,
@@ -18,6 +20,7 @@ export function LoginForm({
   const { t } = useTranslation();
   const { language, setLanguage } = useStore();
   const { i18n } = useTranslation();
+  const navigate = useNavigate();
 
   if (language === "system") {
     const systemLanguage = navigator.language.split("-")[0];
@@ -33,6 +36,19 @@ export function LoginForm({
       setLanguage("en");
     }
   }
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    console.log("Form submitted");
+    const { error } = await supabase.auth.signInWithPassword({
+      email: "s.roloff01@gmail.com",
+      password: "xsBK4CRACqPGp4xQu-jbRPk9",
+    });
+    if (error) {
+      console.error(error);
+      return;
+    }
+    navigate("/");
+  };
 
   return (
     <form className={cn("flex flex-col gap-6", className)} {...props}>
@@ -73,7 +89,9 @@ export function LoginForm({
           />
         </Field>
         <Field>
-          <Button type="submit">{t("loginForm.login")}</Button>
+          <Button type="submit" onClick={(e) => handleSubmit(e)}>
+            {t("loginForm.login")}
+          </Button>
         </Field>
         <FieldSeparator>{t("loginForm.orContinueWith")}</FieldSeparator>
         <Field>
