@@ -2,10 +2,12 @@ import Spacer from "../components/Spacer";
 import { CardSmall } from "../components/Card";
 import Countdown from "@/components/Countdown";
 import PageTransition from "@/components/PageTransition";
+import Greeting from "../components/Greeting.tsx";
 
 function Home() {
   return (
     <PageTransition>
+      <Greeting />
       <CardSmall className="w-[1000px] bg-red-300/10 border-red-400 border-1 py-4 px-2 my-6">
         <p className="text-2xl font-bold mb-4 text-red-400">Important Notice</p>
         <p>

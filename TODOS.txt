@@ -2,6 +2,28 @@ Responsive Login / Sign Up Page
 Forgot your Password? (reset password)
 
 
-To Do's
-Dashboard con Backend Supabase
-Dashboard con Backend Wordpress
+users
+-----
+id
+name
+email
+created_at
+
+habits
+------
+id
+user_id
+name
+description
+color
+icon
+is_active
+created_at
+
+habit_logs
+----------
+id
+habit_id
+date
+completed
+created_at
