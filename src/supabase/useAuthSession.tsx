@@ -1,22 +1,18 @@
 import supabase from "@/supabase/connect";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 
 export const useAuthSession = () => {
   const [authSession, setAuthSession] = useState<Session | null>(null);
+  const [isRecovery, setIsRecovery] = useState<boolean | null>(null);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data, error }) => {
-      if (error) {
-        console.error(error);
-        return;
-      }
-      setAuthSession(data.session);
-    });
-
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (_event === "PASSWORD_RECOVERY") setIsRecovery(true);
+      if (_event === "SIGNED_OUT") setIsRecovery(false);
+      if (_event === "USER_UPDATED") setIsRecovery(false); // Password already changed
       setAuthSession(session);
     });
 
@@ -24,6 +20,5 @@ export const useAuthSession = () => {
       subscription.unsubscribe();
     };
   }, []);
-
-  return { authSession };
+  return { authSession, isRecovery };
 };

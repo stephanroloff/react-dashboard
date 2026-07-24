@@ -20,7 +20,6 @@ export default defineConfig([
     },
     rules: {
       "no-console": "warn",
-      "capitalized-comments": "warn",
       "prefer-const": "warn",
       eqeqeq: "error",
       "react-refresh/only-export-components": "off",

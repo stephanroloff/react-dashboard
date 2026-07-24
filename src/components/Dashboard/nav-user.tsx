@@ -22,7 +22,7 @@ import {
   BellIcon,
   LogOutIcon,
 } from "lucide-react";
-import { useLogOut } from "@/components/Login/useLogOut";
+import { useLogOut } from "@/supabase/useLogOut";
 
 export function NavUser({
   user,

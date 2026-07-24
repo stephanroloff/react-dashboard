@@ -8,7 +8,7 @@ function Home() {
   return (
     <PageTransition>
       <Greeting />
-      <CardSmall className="w-[1000px] bg-red-300/10 border-red-400 border-1 py-4 px-2 my-6">
+      <CardSmall className="w-full bg-red-300/10 border-red-400 border-1 py-4 px-2 my-6">
         <p className="text-2xl font-bold mb-4 text-red-400">Important Notice</p>
         <p>
           We are currently experiencing some technical issues with our system.

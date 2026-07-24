@@ -1,7 +1,31 @@
-Responsive Login / Sign Up Page
-Forgot your Password? (reset password)
+-----------------------------------------------------------
+LOGIN / SIGN UP / RESET PASSWORD
+-----------------------------------------------------------
+
+-Revisar con calma flujo: Sign In / Sign Up / Reset Password
+  -✅ Intentar Loguearse cuando cuenta no existe (mensaje crdenciales no validas)
+  -✅ Intentar Loguearse cuando cuenta existe (entra normal)
+  -✅ Intentar Registrarse cuando no existe cuenta (muestra mensaje y manda mail con Link)
+  -✅ Intentar Re-Registrarse con el mismo Email (No deberia enviarse nada, solo mostrar mensaje)
+  -✅ Intentar resetear password con mail que no existe (se deberia mostrar mensaje)
+  -✅ Intentar resetear password con mail que existe (se deberia mostrar mensaje y llegar mail con link)
+
+-Borrar mensajes de console.log()
+  
+-SSO (Google, Apple y Github)
+-----------------------------------------------------------
 
 
+-----------------------------------------------------------
+DASHBOARD
+-----------------------------------------------------------
+-Responsive
+-----------------------------------------------------------
+
+
+-----------------------------------------------------------
+DATABASE
+-----------------------------------------------------------
 users
 -----
 id
@@ -27,3 +51,4 @@ habit_id
 date
 completed
 created_at
+-----------------------------------------------------------

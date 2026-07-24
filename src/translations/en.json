@@ -16,7 +16,10 @@
     "loginWithGoogle": "Login with Google",
     "loginWithApple": "Login with Apple",
     "dontHaveAccount": "Don't have an account?",
-    "signUp": "Sign up"
+    "signUp": "Sign up",
+    "emailError": "Invalid email address",
+    "passwordError": "Invalid password.",
+    "rootError": "Invalid login credentials."
   },
   "signupForm": {
     "title": "Create your account",
@@ -29,6 +32,34 @@
     "confirmPasswordDescription": "Please confirm your password.",
     "signUp": "Sign up",
     "alreadyHaveAccount": "Already have an account?",
-    "loginHere": "Login here"
+    "loginHere": "Login here",
+    "nameError": "Name is required",
+    "accountCreated": "Your account has been created successfully. We've sent you an email with a link to verify your email address."
+  },
+  "addEmailForm": {
+    "title": "Reset your password",
+    "description": "Enter your email below to reset your password. You will receive an email with instructions on how to reset your password.",
+    "email": "Email",
+    "sendEmail": "Send email",
+    "passwordResetLinkSent": "A password reset link has been sent to your email address."
+  },
+  "comparePasswordForm": {
+    "title": "Create a new password",
+    "description": "Enter your new password and confirm it below.",
+    "password": "New password",
+    "confirmPassword": "Confirm new password",
+    "passwordPlaceholder": "Enter your password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "comparePassword": "Compare password",
+    "passwordChangedSuccessfully": "Your password has been changed successfully. You can now login with your new password.",
+    "resetPassword": "Reset password",
+    "passwordMismatch": "Passwords do not match.",
+    "passwordMinLength": "Password must be at least 8 characters long.",
+    "passwordMustContainAtLeastOneUppercaseLetter": "Password must contain at least one uppercase letter.",
+    "passwordMustContainAtLeastOneLowercaseLetter": "Password must contain at least one lowercase letter.",
+    "passwordMustContainAtLeastOneNumber": "Password must contain at least one number.",
+    "passwordMustContainAtLeastOneSpecialCharacter": "Password must contain at least one special character.",
+    "goToLoginPage": "Go to sign in page",
+    "samePasswordError": "The new password must be different from the current one."
   }
 }
