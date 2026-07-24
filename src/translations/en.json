@@ -15,6 +15,7 @@
     "orContinueWith": "Or continue with",
     "loginWithGoogle": "Login with Google",
     "loginWithApple": "Login with Apple",
+    "loginWithFacebook": "Login with Facebook",
     "dontHaveAccount": "Don't have an account?",
     "signUp": "Sign up",
     "emailError": "Invalid email address",

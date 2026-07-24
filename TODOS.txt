@@ -9,8 +9,6 @@ LOGIN / SIGN UP / RESET PASSWORD
   -✅ Intentar Re-Registrarse con el mismo Email (No deberia enviarse nada, solo mostrar mensaje)
   -✅ Intentar resetear password con mail que no existe (se deberia mostrar mensaje)
   -✅ Intentar resetear password con mail que existe (se deberia mostrar mensaje y llegar mail con link)
-
--Borrar mensajes de console.log()
   
 -SSO (Google, Apple y Github)
 -----------------------------------------------------------
@@ -22,6 +20,10 @@ DASHBOARD
 -Responsive
 -----------------------------------------------------------
 
+
+Gestion de usuarios
+-Cuando fue el ultimo LOGIN
+-Mas de 6 meses sin actividad, borrar cuenta?
 
 -----------------------------------------------------------
 DATABASE
