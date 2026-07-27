@@ -10,7 +10,8 @@ LOGIN / SIGN UP / RESET PASSWORD
   -✅ Intentar resetear password con mail que no existe (se deberia mostrar mensaje)
   -✅ Intentar resetear password con mail que existe (se deberia mostrar mensaje y llegar mail con link)
   
--SSO (Google, Apple y Github)
+-SSO (Google, Facebook, y Github)
+-MFA (2FA)
 -----------------------------------------------------------
 
 
@@ -21,19 +22,32 @@ DASHBOARD
 -----------------------------------------------------------
 
 
-Gestion de usuarios
--Cuando fue el ultimo LOGIN
--Mas de 6 meses sin actividad, borrar cuenta?
+
 
 -----------------------------------------------------------
 DATABASE
 -----------------------------------------------------------
+
+Gestion de usuarios
+-Mas de 6 meses sin actividad, borrar cuenta? (last_sign_in)  / inactive -> 
+-Limpieza de cuentas incompletas (Usuarios que se registran pero nunca verifican email.)
+-Muchos intentos fallidos: 5 intentos fallidos en 15 minutos
+-Sesiones antiguas: limpiar sessiones
+-Cambio de email
+
 users
 -----
 id
 name
 email
 created_at
+last_sign_in
+phone
+image_url
+role
+birth_date
+
+
 
 habits
 ------

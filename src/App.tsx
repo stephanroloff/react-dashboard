@@ -31,7 +31,7 @@ function App() {
           <AppSidebar />
           <SidebarTrigger />
 
-          <main className="w-full p-16 relative">
+          <main className="w-full p-16 relative max-[768px]:px-[28px]">
             <Navbar />
             <BreadcrumbComponent />
             <AnimatePresence mode="wait">
