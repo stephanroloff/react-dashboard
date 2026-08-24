@@ -1,13 +1,16 @@
-import { useGetUser } from "../supabase/useGetUser.tsx";
+import { useGetUserProfile } from "../supabase/user/useGetUserProfile.tsx";
 
 function Greeting() {
-  const { data, isLoading, isError, error } = useGetUser(2);
+  const { data, isLoading, isError } = useGetUserProfile();
 
   if (isLoading) return <p>Loading...</p>;
+  if (isError) return <p>Error</p>;
 
-  if (isError) return <p>Error: {error?.message}</p>;
-
-  return <div>Hello {data?.name}! Welcome to the dashboard.</div>;
+  return (
+    <>
+      <div>Hello {data?.name || data?.email}! Welcome to the dashboard.</div>
+    </>
+  );
 }
 
 export default Greeting;

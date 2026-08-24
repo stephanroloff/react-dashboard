@@ -7,5 +7,5 @@ export const signUp = async (data: SignUpSchema) => {
     password: data.password,
   });
 
-  return error;
+  return { error };
 };

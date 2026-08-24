@@ -42,7 +42,7 @@ export function SignUpForm({
   useDetectLanguage();
 
   const onSubmit = async (data: SignUpSchema) => {
-    const error = await signUp(data);
+    const { error } = await signUp(data);
     if (error) {
       setError("root", { message: error.message });
       throw new Error(error.message);

@@ -1,4 +1,11 @@
 {
+  "General": {
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info",
+    "loading": "Loading"
+  },
   "countdown": {
     "days": "Days",
     "hours": "Hours",
@@ -62,5 +69,13 @@
     "passwordMustContainAtLeastOneSpecialCharacter": "Password must contain at least one special character.",
     "goToLoginPage": "Go to sign in page",
     "samePasswordError": "The new password must be different from the current one."
+  },
+  "profileForm": {
+    "title": "Edit profile",
+    "description": "Here you can edit your profile information.",
+    "name": "Name",
+    "email": "Email",
+    "save": "Save",
+    "success": "Your profile information has been saved successfully."
   }
 }

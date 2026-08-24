@@ -1,4 +1,11 @@
 {
+  "General": {
+    "success": "Erfolgreich",
+    "error": "Fehler",
+    "warning": "Warnung",
+    "info": "Info",
+    "loading": "Laden"
+  },
   "countdown": {
     "days": "Tage",
     "hours": "Stunden",
@@ -62,5 +69,13 @@
     "passwordMustContainAtLeastOneSpecialCharacter": "Das Passwort muss mindestens ein Sonderzeichen enthalten.",
     "goToLoginPage": "Zur Anmeldeseite",
     "samePasswordError": "Das neue Passwort muss sich vom aktuellen unterscheiden."
+  },
+  "profileForm": {
+    "title": "Profil bearbeiten",
+    "description": "Hier kannst du deine Profilinformationen bearbeiten.",
+    "name": "Name",
+    "email": "E-Mail",
+    "save": "Speichern",
+    "success": "Deine Profilinformationen wurden erfolgreich gespeichert."
   }
 }

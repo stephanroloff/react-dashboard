@@ -1,4 +1,11 @@
 {
+  "General": {
+    "success": "Éxito",
+    "error": "Error",
+    "warning": "Advertencia",
+    "info": "Información",
+    "loading": "Cargando"
+  },
   "countdown": {
     "days": "Días",
     "hours": "Horas",
@@ -62,5 +69,13 @@
     "passwordMustContainAtLeastOneSpecialCharacter": "La contraseña debe contener al menos un carácter especial.",
     "goToLoginPage": "Ir a la página de inicio de sesión",
     "samePasswordError": "La nueva contraseña debe ser diferente a la actual."
+  },
+  "profileForm": {
+    "title": "Editar perfil",
+    "description": "Aquí puedes editar tu información de perfil.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "save": "Guardar",
+    "success": "Tu información de perfil ha sido guardada correctamente."
   }
 }

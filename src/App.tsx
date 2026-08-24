@@ -16,6 +16,8 @@ import { LoginForm } from "./components/Login/LoginForm.tsx";
 import { SignUpForm } from "./components/SignUp/SignUpForm.tsx";
 import { AddEmailForm } from "./components/ResetPassword/AddEmailForm.tsx";
 import { ComparePasswordForm } from "./components/ResetPassword/ComparePasswordForm.tsx";
+import Profile from "./pages/Profile.tsx";
+import { Toaster } from "./components/ui/sonner.tsx";
 
 function App() {
   const { authSession, isRecovery } = useAuthSession();
@@ -26,6 +28,7 @@ function App() {
 
   return (
     <>
+      <Toaster />
       {authSession && !isRecovery && (
         <SidebarProvider>
           <AppSidebar />
@@ -44,6 +47,7 @@ function App() {
                 <Route path="/login" element={<Navigate to="/" />} />
                 <Route path="/sign-up" element={<Navigate to="/" />} />
                 <Route path="/reset-password" element={<Navigate to="/" />} />
+                <Route path="/profile" element={<Profile />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </AnimatePresence>

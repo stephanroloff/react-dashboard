@@ -17,12 +17,13 @@ import {
 import {
   ChevronsUpDownIcon,
   SparklesIcon,
-  BadgeCheckIcon,
+  UserIcon,
   CreditCardIcon,
   BellIcon,
   LogOutIcon,
 } from "lucide-react";
 import { useLogOut } from "@/supabase/useLogOut";
+import { useNavigate } from "react-router";
 
 export function NavUser({
   user,
@@ -35,7 +36,7 @@ export function NavUser({
 }) {
   const { isMobile } = useSidebar();
   const logOut = useLogOut();
-
+  const navigate = useNavigate();
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -83,9 +84,9 @@ export function NavUser({
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <BadgeCheckIcon />
-                Account
+              <DropdownMenuItem onClick={() => navigate("/profile")}>
+                <UserIcon />
+                Profile
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <CreditCardIcon />

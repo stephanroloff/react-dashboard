@@ -16,19 +16,10 @@ LOGIN / SIGN UP / RESET PASSWORD
 
 
 -----------------------------------------------------------
-DASHBOARD
------------------------------------------------------------
--Responsive
------------------------------------------------------------
-
-
-
-
------------------------------------------------------------
 DATABASE
 -----------------------------------------------------------
 
-Gestion de usuarios
+Gestion de usuarios (Cronjobs?)
 -Mas de 6 meses sin actividad, borrar cuenta? (last_sign_in)  / inactive -> 
 -Limpieza de cuentas incompletas (Usuarios que se registran pero nunca verifican email.)
 -Muchos intentos fallidos: 5 intentos fallidos en 15 minutos
@@ -38,15 +29,15 @@ Gestion de usuarios
 users
 -----
 id
-name
 email
-created_at
-last_sign_in
-phone
-image_url
+name
 role
+phone
+profile_image_url
 birth_date
 
+created_at (existe ya en la tabla auth.user)
+last_sign_in_at (existe ya en la tabla auth.user)
 
 
 habits
