@@ -13,13 +13,15 @@ import { CardSmall } from "../Card";
 import {
   profileFormSchema,
   type ProfileFormSchema,
-} from "@/schemas/ProfileFormSchema";
+} from "@/schemas/profileFormSchema";
+import { usePostUserName } from "@/supabase/user/usePostUserName";
 
 export function ProfileForm({
   className,
   ...props
 }: React.ComponentProps<"form">) {
   const { t } = useTranslation();
+  const { mutate } = usePostUserName();
   const {
     handleSubmit,
     control,
@@ -27,11 +29,11 @@ export function ProfileForm({
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm<ProfileFormSchema>({
     resolver: zodResolver(profileFormSchema(t)),
-    defaultValues: { email: "" },
+    defaultValues: { name: "" },
   });
 
   const onSubmit = async (data: ProfileFormSchema) => {
-    console.log(data.name);
+    mutate({ name: data.name });
   };
 
   return (

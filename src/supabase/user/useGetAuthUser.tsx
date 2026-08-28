@@ -1,7 +1,8 @@
 import supabase from "../connect";
 import { useQuery } from "@tanstack/react-query";
 
-export function useGetUser() {
+// Important: Getting the user from the auth database, not the public database.
+export function useGetAuthUser() {
   return useQuery({
     queryKey: ["auth-user"],
     queryFn: async () => {

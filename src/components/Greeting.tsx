@@ -1,7 +1,7 @@
-import { useGetUserProfile } from "../supabase/user/useGetUserProfile.tsx";
+import { useGetPublicUser } from "@/supabase/user/useGetPublicUser";
 
 function Greeting() {
-  const { data, isLoading, isError } = useGetUserProfile();
+  const { data, isLoading, isError } = useGetPublicUser();
 
   if (isLoading) return <p>Loading...</p>;
   if (isError) return <p>Error</p>;
